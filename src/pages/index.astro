@@ -62,6 +62,32 @@ function mensaje(str)&#123;
 				<figcaption>Logotipo oficial del lenguaje de marcas HTML5.</figcaption>
 			</figure>
 		</Etiqueta>
+
+		<h2>Etiquetas Multimedia</h2>
+		<Etiqueta title='img' body='Etiqueta que permite incluir una imagen'>
+			<img src="/html5.png" alt="imagen del logo de html5">
+		</Etiqueta>
+		<Etiqueta title='picture' body='Etiqueta que permite mostrar imagen de forma dinamica segun sea el tamaño de la pantalla'>
+			<picture>
+				<source media="(width < 600px)"
+						srcset="html5-2.jpeg">
+				<img src="/html5.png" alt="HTML5 logo">
+			  </picture>
+		</Etiqueta>
+		<Etiqueta title='video' body='Etiqueta para mostrar video'>
+			<video src="/Meilleur.mp4" width="800px" autoplay></video>
+		</Etiqueta>
+		<Etiqueta title='audio' body='Etiqueta que se utiliza para reproducir audio'>
+			<audio controls src="/NightOver.mp3"></audio>
+		</Etiqueta>
+		<Etiqueta title='track' body='Etiqueta para poner subtitulos a video y audio(no soportado)'>
+			<audio controls src="/NightOver.mp3">
+				<track src="/NightOver.vtt" srclang="en">
+			</audio>
+		</Etiqueta>
+		<Etiqueta title='iframe' body='Etiqueta para insertar contenido externo a nuestra pagina'>
+			<iframe src="https://www.youtube.com/embed/FHT3xNYZU8o" width="800"></iframe>
+		</Etiqueta>
 	</main>
 </Layout>
 
