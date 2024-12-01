@@ -130,6 +130,218 @@ function mensaje(str)&#123;
 				<data value="ESDLA3">El retorno del Rey</data>
 			</p>
 		</Etiqueta>
+		<h2>Etiquetas de Tablas</h2>
+		<Etiqueta title='table' body='Etiqueta para hacer tablas en con etiquetas auxiliares como tr, th y td'>
+			<table>
+				<tr>
+					<th>Título columna 1</th> <!-- Celda cabecera de la columna 1 -->
+					<th>Título columna 2</th> <!-- Celda cabecera de la columna 2 -->
+					<th>Título columna 3</th> <!-- Celda cabecera de la columna 3 -->
+				  </tr>
+				  <!-- Primera fila -->
+				  <tr>
+					<td>Celda 1x1</td> <!-- Primera celda de la primera fila -->
+					<td>Celda 2x1</td> <!-- Segunda celda de la primera fila -->
+					<td>Celda 3x1</td> <!-- Tercera celda de la primera fila -->
+				  </tr>
+				  <!-- Segunda fila -->
+				  <tr>
+					<td>Celda 1x2</td> <!-- Primera celda de la segunda fila -->
+					<td>Celda 2x2</td> <!-- Segunda celda de la segunda fila -->
+					<td>Celda 3x2</td> <!-- Tercera celda de la segunda fila -->
+				  </tr>
+			</table>
+		</Etiqueta>
+		<Etiqueta title='thead,tbody,tfoot' body='son etiquetas de agrupacion para tablas'>
+			<table style="background-color: grey;">
+				<caption>Calificaciones de los alumnos</caption>
+				<tfoot>
+				  <tr>
+					<td>Ref.</td>
+					<td>5.0</td>
+					<td>5.0</td>
+					<td>5.0</td>
+				  </tr>
+				</tfoot>
+				<thead>
+				  <tr>
+					<th rowspan="2">Estudiante</th>
+					<th colspan="3">Calificación</th>
+				  </tr>
+				  <tr>
+					<th>1º ev.</th>
+					<th>2º ev.</th>
+					<th>3º ev.</th>
+				  </tr>
+				</thead>
+				<tbody>
+				<tr>
+				  <td>Bernardo</td>
+				  <td>5.7</td>
+				  <td>8.3</td>
+				  <td>8.9</td>
+				</tr>
+				<tr>
+				  <td>Remigio</td>
+				  <td>4.7</td>
+				  <td>4.7</td>
+				  <td>1.3</td>
+				</tr>
+				<tr>
+				  <td>Ana</td>
+				  <td>9.7</td>
+				  <td>9.7</td>
+				  <td>9.9</td>
+				</tr>
+				</tbody>
+				<!-- ... -->
+			  </table>
+		</Etiqueta>
+		<Etiqueta title='colgroup' body='Etiqueta utilizada para agrupar columnas'>
+			<table>
+				<caption>Calificaciones de los alumnos</caption>
+				<colgroup>
+				  <col></col>
+				  <col style="background:#ff9999"></col>
+				  <col style="background:#ff5555"></col>
+				  <col style="background:#ff2222"></col>
+				</colgroup>
+				<tfoot>
+				  <tr>
+					<td>Ref.</td>
+					<td>5.0</td>
+					<td>5.0</td>
+					<td>5.0</td>
+				  </tr>
+				</tfoot>
+				<thead>
+				  <tr class="title">
+					<th rowspan="2">Estudiante</th>
+					<th colspan="3">Calificación</th>
+				  </tr>
+				  <tr>
+					<th>1º ev.</th>
+					<th>2º ev.</th>
+					<th>3º ev.</th>
+				  </tr>
+				</thead>
+				<tbody>
+				<tr>
+				  <td>Bernardo</td>
+				  <td>5.7</td>
+				  <td>8.3</td>
+				  <td>8.9</td>
+				</tr>
+				<tr>
+				  <td>Remigio</td>
+				  <td>4.7</td>
+				  <td>4.7</td>
+				  <td>1.3</td>
+				</tr>
+				<tr>
+				  <td>Ana</td>
+				  <td>9.7</td>
+				  <td>9.7</td>
+				  <td>9.9</td>
+				</tr>
+				</tbody>
+				<!-- ... -->
+			  </table>
+		</Etiqueta>
+		<h2>Etiquetas de Formularios</h2>
+		<Etiqueta title='form' body='Etiqueta que indica la creacion de una formulario'>
+			<form method="get" action="/search/" target="_blank" accept-charset="utf-8"></form>
+		</Etiqueta>
+		<Etiqueta title='input' body='Etiqueta de formularios para indicar entrada de datos'>
+			<input type="text" placeholder="texto">
+			<input type="search" placeholder="busqueda">
+			<input type="tel" placeholder="9999-999-99">
+			<input type="url" placeholder="https://google.com">
+			<input type="email" placeholder="johndoe@doe.com">
+			<input type="password" placeholder="contraseña">
+			<input type="hidden" value="Oculto">
+			
+			<hr>
+			<input type="number">
+			<input type="range">
+			<hr>
+			<input type="date">
+			<input type="month">
+			<input type="week">
+			<input type="time">
+			<input type="datetime-local">
+			<hr>
+			<input type="checkbox" name="" id="">
+			<input type="radio" name="" id="">
+			<hr>
+			<input type="color">
+			<hr>
+			<form method="post" action="/send/" enctype="multipart/form-data">
+				<input type="file">
+			  </form>
+		</Etiqueta>
+		<Etiqueta title='textarea' body='Etiquera de entrada de texto descriptivo'>
+			<textarea placeholder="Aqui muchas palabras"></textarea>
+		</Etiqueta>
+		<Etiqueta title='select' body='Etiqueta de seleccion multiple'>
+			<select>
+				<optgroup label="Opciones">
+					<option value="1">Opción 1</option>
+					<option value="2">Opción 2</option>
+					<option value="3">Opción 3</option>
+				</optgroup>
+			  </select>
+		</Etiqueta>
+		<Etiqueta title='datalist' body='Etiqueta de control, va agrupada a un input'>
+			<form method="post" action="/send/">
+				<input type="text" list="items">
+				<datalist id="items">
+				  <option value="manzdev">ManzDev</option>
+				  <option value="afor_digital">Afor_digital</option>
+				  <option value="padawanstrainer">PadawansTrainer</option>
+				  <option value="chrisvdev">ChrisvDev</option>
+				</datalist>
+			  </form>
+			  <hr>
+			  <form method="post" action="/send/">
+				<input type="date" list="items" value="2024-02-23">
+				<datalist id="items">
+				  <option value="2024-02-23">23 de Febrero</option>
+				  <option value="2024-03-23">23 de Marzo</option>
+				  <option value="2024-04-23">23 de Abril</option>
+				</datalist>
+			  </form>
+		</Etiqueta>
+		<Etiqueta title='fieldset' body='Etiqueta de agrupacion visual'>
+			<form method="post" action="/send/">
+				<fieldset>
+				  <legend>Datos personales</legend>
+				  Nombre de usuario: <input placeholder="Por ej: John Smith">
+				  Edad: <input type="number" min="18" placeholder="18">
+				</fieldset>
+			  
+				<fieldset>
+				  <legend>Datos fiscales</legend>
+				  <input type="radio" name="userdata" value="user"> Particular
+				  <input type="radio" name="userdata" value="business"> Empresa/Autónomo
+				</fieldset>
+			  </form>
+		</Etiqueta>
+		<Etiqueta title='label' body='Etiqueta relacional para inputs'>
+			<form method="post" action="/send/">
+				<label>Nombre de usuario:
+				  <input placeholder="Por ej: John Smith">
+				</label>
+			  
+				<label>
+				  Edad:
+				  <input type="number" min="18" placeholder="18">
+				</label>
+			  </form>
+		</Etiqueta>
+		<Etiqueta title='button' body='Etiqueta para definir un boton'>
+			<button>Botón</button>
+		</Etiqueta>
 	</main>
 </Layout>
 
